@@ -1,0 +1,36 @@
+<mat-toolbar class="height-navbar" color="primary">
+  <mat-toolbar-row>
+
+    <img src="assets/img/amazontrans.png" [routerLink]="['/home']">
+
+    <a mat-button class="hide-sm" *ngFor="let item of BUTTONS" [routerLink]="[item.path]" [routerLinkActive]="'active'">
+      {{ item.title }}
+    </a>
+
+    <span class="spacer-toolbar"></span>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+      matTooltip="Example">
+      <mat-icon>translate</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="changeLanguage('en')">
+        <mat-icon>language</mat-icon>
+        <span>English</span>
+      </button>
+
+      <button mat-menu-item (click)="changeLanguage('pt')">
+        <mat-icon>language</mat-icon>
+        <span>Portugues</span>
+      </button>
+    </mat-menu>
+
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="hide-all-not-sm justify-content-center">
+    <a mat-button *ngFor="let item of BUTTONS" [routerLink]="[item.path]" [routerLinkActive]="'active'">
+      {{ item.title }}
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
