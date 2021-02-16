@@ -1,8 +1,9 @@
 mat-toolbar {
   height: 66px !important;
   min-height: 66px !important;
-  // background-color: #fff !important;
-  // color: #263238 !important;
+  background-color: #fff !important;
+  box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 10%);
+  color: #263238 !important;
   position: relative;
   top: 0;
   left: 0;
@@ -25,12 +26,8 @@ mat-toolbar {
     cursor: pointer;
   }
   a {
-    margin-left: 30px;
     &.active {
-      padding: 22px;
-      border-bottom: 5px solid #c62828;
-      border-radius: inherit;
-      height: inherit;
+      color: #c62828;
     }
   }
 }
