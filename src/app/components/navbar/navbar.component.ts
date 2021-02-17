@@ -11,15 +11,15 @@ export class NavbarComponent implements OnInit {
   public BUTTONS: {path: string, title: string}[] = [
     {
       path: '/galeria',
-      title: 'navbar.gallery'
+      title: 'Galeria'
     },
     {
       path: '/sobre',
-      title: 'navbar.about'
+      title: 'Sobre'
     },
     {
       path: '/contato',
-      title: 'navbar.contact'
+      title: 'Contato'
     }
   ];
 

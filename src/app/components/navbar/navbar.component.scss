@@ -9,12 +9,26 @@ mat-toolbar {
   left: 0;
   right: 0;
   z-index: 2;
-  img {
-    height: 90%;
-    padding: 0 10px;
-    width: 146px;
-    background-color: transparent;
-    cursor: pointer;
+  div {
+    display: flex;
+    padding: 5px 5px 5px 0px;
+    align-items: center;
+    line-height: 0;
+    img {
+      height: 60px;
+      padding: 0px;
+      width: 122px;
+      margin-right: 15%;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    &.line-center {
+      flex: 1;
+      justify-content: center;
+    }
+    &.first-line {
+      padding: 5px 5px 5px 15px;
+    }
   }
   mat-toolbar-row {
     padding: 0;
