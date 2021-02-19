@@ -13,7 +13,7 @@ mat-toolbar {
     display: flex;
     padding: 5px 5px 5px 0px;
     align-items: center;
-    line-height: 0;
+    // line-height: 0;
     img {
       height: 60px;
       padding: 0px;
@@ -40,13 +40,42 @@ mat-toolbar {
     cursor: pointer;
   }
   a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 1.1rem;
+
     &.active {
       color: #c62828;
     }
-  }
-}
 
-/* toolbar settings */
-.spacer-toolbar {
-  flex: 1 1 auto;
+    &:not(.active) {
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transform: translateX(-100%);
+        padding: 0 16px;
+        transition: transform 275ms ease;
+
+        &::before {
+          display: inline-block;
+          content: attr(data-content);
+          color: #c62828;
+          transform: translateX(100%);
+          transition: transform 275ms ease;
+        }
+      }
+
+      &:hover {
+        span {
+          transform: translateX(0);
+          &::before {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
 }

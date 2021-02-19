@@ -3,6 +3,7 @@
 
     <div class="first-line">
       <a mat-button class="hide-sm" *ngFor="let item of BUTTONS" [routerLink]="[item.path]" [routerLinkActive]="'active'">
+        <span [attr.data-content]="item.title" aria-hidden="true"></span>
         {{ item.title }}
       </a>
     </div>
