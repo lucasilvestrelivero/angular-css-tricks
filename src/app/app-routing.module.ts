@@ -1,3 +1,7 @@
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { HomeComponent } from './components/home/home.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -5,19 +9,19 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent
+    component: HomeComponent,
   },
   {
     path: 'galeria',
-    component: AppComponent
+    component: GalleryComponent
   },
   {
     path: 'sobre',
-    component: AppComponent
+    component: AboutComponent
   },
   {
     path: 'contato',
-    component: AppComponent
+    component: ContactComponent
   },
   {
     path: 'home',
